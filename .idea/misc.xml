@@ -5,12 +5,15 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.20742753623188406" />
         <entry key="app/src/main/res/drawable/anime.xml" value="0.229" />
+        <entry key="app/src/main/res/layout/activity_card.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_lets_do_it.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_machine.xml" value="0.1897644927536232" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_ugamer.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_wheel.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/scroll_view.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/wheel_content.xml" value="0.19610507246376813" />
       </map>
     </option>
   </component>

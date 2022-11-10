@@ -46,7 +46,7 @@
             app:cardCornerRadius="20dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:backgroundTint="#C3B222">
+            android:backgroundTint="@color/black">
     <ImageView
         android:id="@+id/imvOne"
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             app:cardCornerRadius="20dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#C3B222">
+            android:backgroundTint="@color/black">
 
         <ImageView
             android:id="@+id/imvTwo"
@@ -77,7 +77,7 @@
             app:cardCornerRadius="20dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#C3B222">
+            android:backgroundTint="@color/black">
 
         <ImageView
             android:id="@+id/imvThree"

@@ -13,17 +13,17 @@ import com.habby.archeroa.databinding.ActivityMachineBinding
 import java.util.*
 
 class MachineActivity : AppCompatActivity() {
-    lateinit var bindMachineGame: ActivityMachineBinding
+    private lateinit var bindMachineGame: ActivityMachineBinding
 
-    var r = Random()
-    var img1: Int = 0
-    var img2: Int = 0
-    var img3: Int = 0
-    var starterScore = 10000;
-    lateinit var imvOneAct: ImageView
-    lateinit var imvTwoAct: ImageView
-    lateinit var imvThrAct: ImageView
-    lateinit var scoreTxt: TextView
+    private var r = Random()
+    private var img1: Int = 0
+    private var img2: Int = 0
+    private var img3: Int = 0
+    private var starterScore = 10000
+    private lateinit var imvOneAct: ImageView
+    private lateinit var imvTwoAct: ImageView
+    private lateinit var imvThrAct: ImageView
+    private lateinit var scoreTxt: TextView
 
 
 
@@ -33,16 +33,17 @@ class MachineActivity : AppCompatActivity() {
         bindMachineGame = ActivityMachineBinding.inflate(layoutInflater)
         setContentView(bindMachineGame.root)
 
-        imvOneAct = bindMachineGame.imvOne
-        imvTwoAct = bindMachineGame.imvTwo
-        imvThrAct = bindMachineGame.imvThree
-        scoreTxt = bindMachineGame.scoreText
+        bindMachineGame.imvOne.also { imvOneAct = it }
+        bindMachineGame.imvTwo.also { imvTwoAct = it }
+        bindMachineGame.imvThree.also { imvThrAct = it }
+        bindMachineGame.scoreText.also { scoreTxt = it }
         scoreTxt.text = starterScore.toString()
 
         bindMachineGame.rollBtn.setOnClickListener{
-           var minus1k: Int = starterScore-1000
+           val minus1k: Int = starterScore-1000
             starterScore = minus1k
             scoreTxt.text = starterScore.toString()
+
 
 
         imvOneAct.setBackgroundResource(R.drawable.anime)
@@ -66,10 +67,9 @@ class MachineActivity : AppCompatActivity() {
 
             getScore()
 
-        }, 300)
-
-
+        }, 1000)
     }
+
     }
 
     private fun setImages() {
@@ -120,12 +120,16 @@ class MachineActivity : AppCompatActivity() {
     private fun getScore() {
 
         if (img1 == img2 && img2 == img3) {
-            Toast.makeText(this, "Jackpot!", Toast.LENGTH_SHORT).show()
+            val plus10k: Int = scoreTxt.text.toString().toInt()+10000
+            Toast.makeText(this, "JACKPOT! +10000", Toast.LENGTH_SHORT).show()
+            scoreTxt.text=plus10k.toString()
         }
         if(img1 == img2 || img2 == img3 || img1 == img3) {
-            Toast.makeText(this, "Awesome!", Toast.LENGTH_SHORT).show()
-        }
+            val plus2k: Int = scoreTxt.text.toString().toInt()+2000
+            Toast.makeText(this, "+2000", Toast.LENGTH_SHORT).show()
 
+            scoreTxt.text=plus2k.toString()
+        }
 
     }
 }
