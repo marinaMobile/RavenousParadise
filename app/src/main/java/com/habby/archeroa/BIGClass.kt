@@ -15,7 +15,6 @@ class BIGClass: Application() {
 
         val linkFilterPart1 = "http://ravenous"
         val linkFilterPart2 = "paradise.xyz/go.php?to=1&"
-
         var MYID: String? = "myID"
         var INSTID: String? = "instID"
 
@@ -37,7 +36,6 @@ class BIGClass: Application() {
         trackerParams.setCustomUserId(ID)
         Hawk.put(MYID, ID)
         Hawk.put(INSTID, instID)
-        Log.d("dev_test", instID)
         MyTracker.initTracker(SDK_KEY, this)
     }
 }
