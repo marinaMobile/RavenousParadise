@@ -8,6 +8,7 @@
     android:background="@drawable/backgr">
 
    <TextView
+       android:id="@+id/nameRave"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="@string/app_name"
@@ -19,24 +20,40 @@
       android:textColor="@color/white"
       android:textSize="40sp"/>
 
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/nameRave"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/machineGame"
+      android:textColor="@color/white"
+      android:textSize="36sp"
+      android:gravity="center"
+      android:fontFamily="@font/xahn"
+      android:padding="8dp"
+      android:text="Welcome to Ravenous Paradise. Three light mini games included in one app. Don't wait play it now!"/>
+
 
    <Button
        android:id="@+id/machineGame"
-       android:layout_width="wrap_content"
+       android:layout_width="200dp"
        android:layout_height="wrap_content"
-       android:layout_marginBottom="236dp"
+       android:layout_marginBottom="240dp"
+       android:fontFamily="@font/bree"
        android:text="Slot Game"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.494"
+       app:layout_constraintHorizontal_bias="0.497"
        app:layout_constraintStart_toStartOf="parent" />
 
    <Button
        android:id="@+id/wheelGame"
-       android:layout_width="wrap_content"
+       android:layout_width="200dp"
        android:layout_height="wrap_content"
        android:layout_marginBottom="60dp"
        android:text="wheel game"
+       android:fontFamily="@font/bree"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintHorizontal_bias="0.498"
@@ -45,14 +62,15 @@
 
    <Button
        android:id="@+id/cardGame"
-       android:layout_width="wrap_content"
+       android:layout_width="200dp"
        android:layout_height="wrap_content"
        android:layout_marginBottom="148dp"
+       android:fontFamily="@font/bree"
        android:text="Card game"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.489"
-       app:layout_constraintStart_toStartOf="parent"/>
+       app:layout_constraintHorizontal_bias="0.497"
+       app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

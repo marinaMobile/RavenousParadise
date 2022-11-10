@@ -16,14 +16,14 @@ class MachineActivity : AppCompatActivity() {
     private lateinit var bindMachineGame: ActivityMachineBinding
 
     private var r = Random()
-    private var img1: Int = 0
-    private var img2: Int = 0
-    private var img3: Int = 0
+    private var ufherhfoerhf1: Int = 0
+    private var ufherhfoerhf2: Int = 0
+    private var ufherhfoerhf3: Int = 0
     private var starterScore = 10000
-    private lateinit var imvOneAct: ImageView
-    private lateinit var imvTwoAct: ImageView
-    private lateinit var imvThrAct: ImageView
-    private lateinit var scoreTxt: TextView
+    private lateinit var kjebgoeg: ImageView
+    private lateinit var ferhjg: ImageView
+    private lateinit var bhtyhj57k: ImageView
+    private lateinit var gb46j: TextView
 
 
 
@@ -33,29 +33,29 @@ class MachineActivity : AppCompatActivity() {
         bindMachineGame = ActivityMachineBinding.inflate(layoutInflater)
         setContentView(bindMachineGame.root)
 
-        bindMachineGame.imvOne.also { imvOneAct = it }
-        bindMachineGame.imvTwo.also { imvTwoAct = it }
-        bindMachineGame.imvThree.also { imvThrAct = it }
-        bindMachineGame.scoreText.also { scoreTxt = it }
-        scoreTxt.text = starterScore.toString()
+        bindMachineGame.imvOne.also { kjebgoeg = it }
+        bindMachineGame.imvTwo.also { ferhjg = it }
+        bindMachineGame.imvThree.also { bhtyhj57k = it }
+        bindMachineGame.scoreText.also { gb46j = it }
+        gb46j.text = starterScore.toString()
 
         bindMachineGame.rollBtn.setOnClickListener{
            val minus1k: Int = starterScore-1000
             starterScore = minus1k
-            scoreTxt.text = starterScore.toString()
+            gb46j.text = starterScore.toString()
 
 
 
-        imvOneAct.setBackgroundResource(R.drawable.anime)
-        val imageOneAnim: AnimationDrawable = imvOneAct.background as AnimationDrawable
+        kjebgoeg.setBackgroundResource(R.drawable.anime)
+        val imageOneAnim: AnimationDrawable = kjebgoeg.background as AnimationDrawable
         imageOneAnim.start()
 
-        imvTwoAct.setBackgroundResource(R.drawable.anime)
-        val imageTwoAnim: AnimationDrawable = imvTwoAct.background as AnimationDrawable
+        ferhjg.setBackgroundResource(R.drawable.anime)
+        val imageTwoAnim: AnimationDrawable = ferhjg.background as AnimationDrawable
         imageTwoAnim.start()
 
-        imvThrAct.setBackgroundResource(R.drawable.anime)
-        val imageThrAnim: AnimationDrawable = imvThrAct.background as AnimationDrawable
+        bhtyhj57k.setBackgroundResource(R.drawable.anime)
+        val imageThrAnim: AnimationDrawable = bhtyhj57k.background as AnimationDrawable
         imageThrAnim.start()
 
         Handler(Looper.getMainLooper()).postDelayed({
@@ -63,72 +63,72 @@ class MachineActivity : AppCompatActivity() {
             imageTwoAnim.stop()
             imageThrAnim.stop()
 
-            setImages()
+            febgrhtg4uj67ik()
 
-            getScore()
+            fcvry5yji7o()
 
         }, 1000)
     }
 
     }
 
-    private fun setImages() {
-        img1 = r.nextInt(5)+1
-        img2 = r.nextInt(5)+1
-        img3 = r.nextInt(5)+1
+    private fun febgrhtg4uj67ik() {
+        ufherhfoerhf1 = r.nextInt(5)+1
+        ufherhfoerhf2 = r.nextInt(5)+1
+        ufherhfoerhf3 = r.nextInt(5)+1
 
-        when (img1) {
+        when (ufherhfoerhf1) {
             1 ->
-                imvOneAct.setBackgroundResource(R.drawable.one)
+                kjebgoeg.setBackgroundResource(R.drawable.one)
             2 ->
-                imvOneAct.setBackgroundResource(R.drawable.two)
+                kjebgoeg.setBackgroundResource(R.drawable.two)
             3 ->
-                imvOneAct.setBackgroundResource(R.drawable.three)
+                kjebgoeg.setBackgroundResource(R.drawable.three)
             4 ->
-                imvOneAct.setBackgroundResource(R.drawable.four)
+                kjebgoeg.setBackgroundResource(R.drawable.four)
             5 ->
-                imvOneAct.setBackgroundResource(R.drawable.five)
+                kjebgoeg.setBackgroundResource(R.drawable.five)
         }
-        when (img2) {
+        when (ufherhfoerhf2) {
             1 ->
-                imvTwoAct.setBackgroundResource(R.drawable.one)
+                ferhjg.setBackgroundResource(R.drawable.one)
             2 ->
-                imvTwoAct.setBackgroundResource(R.drawable.two)
+                ferhjg.setBackgroundResource(R.drawable.two)
             3 ->
-                imvTwoAct.setBackgroundResource(R.drawable.three)
+                ferhjg.setBackgroundResource(R.drawable.three)
             4 ->
-                imvTwoAct.setBackgroundResource(R.drawable.four)
+                ferhjg.setBackgroundResource(R.drawable.four)
             5 ->
-                imvTwoAct.setBackgroundResource(R.drawable.five)
+                ferhjg.setBackgroundResource(R.drawable.five)
         }
-        when (img3) {
+        when (ufherhfoerhf3) {
             1 ->
-                imvThrAct.setBackgroundResource(R.drawable.one)
+                bhtyhj57k.setBackgroundResource(R.drawable.one)
             2 ->
-                imvThrAct.setBackgroundResource(R.drawable.two)
+                bhtyhj57k.setBackgroundResource(R.drawable.two)
             3 ->
-                imvThrAct.setBackgroundResource(R.drawable.three)
+                bhtyhj57k.setBackgroundResource(R.drawable.three)
             4 ->
-                imvThrAct.setBackgroundResource(R.drawable.four)
+                bhtyhj57k.setBackgroundResource(R.drawable.four)
             5 ->
-                imvThrAct.setBackgroundResource(R.drawable.five)
+                bhtyhj57k.setBackgroundResource(R.drawable.five)
 
         }
 
     }
 
-    private fun getScore() {
+    private fun fcvry5yji7o() {
 
-        if (img1 == img2 && img2 == img3) {
-            val plus10k: Int = scoreTxt.text.toString().toInt()+10000
+        if (ufherhfoerhf1 == ufherhfoerhf2 && ufherhfoerhf2 == ufherhfoerhf3) {
+            val plus10k: Int = gb46j.text.toString().toInt()+10000
             Toast.makeText(this, "JACKPOT! +10000", Toast.LENGTH_SHORT).show()
-            scoreTxt.text=plus10k.toString()
+            gb46j.text=plus10k.toString()
         }
-        if(img1 == img2 || img2 == img3 || img1 == img3) {
-            val plus2k: Int = scoreTxt.text.toString().toInt()+2000
+        if(ufherhfoerhf1 == ufherhfoerhf2 || ufherhfoerhf2 == ufherhfoerhf3 || ufherhfoerhf1 == ufherhfoerhf3) {
+            val plus2k: Int = gb46j.text.toString().toInt()+2000
             Toast.makeText(this, "+2000", Toast.LENGTH_SHORT).show()
 
-            scoreTxt.text=plus2k.toString()
+            gb46j.text=plus2k.toString()
         }
 
     }

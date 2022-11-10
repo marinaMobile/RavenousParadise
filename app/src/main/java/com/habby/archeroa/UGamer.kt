@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.habby.archeroa.databinding.ActivityUgamerBinding
+import com.habby.archeroa.spin.CardActivity
 import com.habby.archeroa.spin.MachineActivity
 import com.habby.archeroa.spin.WheelActivity
 
@@ -20,6 +21,10 @@ class UGamer : AppCompatActivity() {
 
         bindUGamer.wheelGame.setOnClickListener{
             startActivity(Intent(this, WheelActivity::class.java))
+        }
+
+        bindUGamer.cardGame.setOnClickListener{
+            startActivity(Intent(this, CardActivity::class.java))
         }
     }
 }

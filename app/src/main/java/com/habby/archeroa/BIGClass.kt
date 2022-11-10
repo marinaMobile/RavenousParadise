@@ -1,7 +1,6 @@
 package com.habby.archeroa
 
 import android.app.Application
-import android.util.Log
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
 import com.orhanobut.hawk.Hawk
@@ -9,14 +8,14 @@ import java.util.*
 
 class BIGClass: Application() {
     companion object {
-        const val SDK_KEY = "16156558049168456562"
-        const val jsoupCheck = "1v4v"
-        const val ONESIGNAL_APP_ID = "1b92bd3f-356f-41bd-bb66-2ee0ce08c407"
+        const val dfwthyhyj = "16156558049168456562"
+        const val grhtyhyddd = "1v4v"
+        const val jglfkdkdkgjd = "1b92bd3f-356f-41bd-bb66-2ee0ce08c407"
 
-        val linkFilterPart1 = "http://ravenous"
-        val linkFilterPart2 = "paradise.xyz/go.php?to=1&"
-        var MYID: String? = "myID"
-        var INSTID: String? = "instID"
+        val lkflflflds = "http://ravenous"
+        val lnlnlnlnlnlnln = "paradise.xyz/go.php?to=1&"
+        var hfhfudsjfo: String? = "myID"
+        var vtyhyjuikddggccx: String? = "instID"
 
     }
     override fun onCreate() {
@@ -25,7 +24,7 @@ class BIGClass: Application() {
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE)
         // OneSignal Initialization
         OneSignal.initWithContext(this)
-        OneSignal.setAppId(ONESIGNAL_APP_ID)
+        OneSignal.setAppId(jglfkdkdkgjd)
         Hawk.init(this).build()
 
         val trackerParams = MyTracker.getTrackerParams()
@@ -34,8 +33,8 @@ class BIGClass: Application() {
         trackerConfig.isTrackingLaunchEnabled=true
         val ID = UUID.randomUUID().toString()
         trackerParams.setCustomUserId(ID)
-        Hawk.put(MYID, ID)
-        Hawk.put(INSTID, instID)
-        MyTracker.initTracker(SDK_KEY, this)
+        Hawk.put(hfhfudsjfo, ID)
+        Hawk.put(vtyhyjuikddggccx, instID)
+        MyTracker.initTracker(dfwthyhyj, this)
     }
 }
