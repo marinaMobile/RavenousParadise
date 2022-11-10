@@ -18,3 +18,6 @@
 -keep class com.android.installreferrer.** { *; }
 -keep class com.android.vending.billing.** { *; }
 -keep class com.android.billingclient.api.** { *; }
+#Lottie
+-dontwarn com.airbnb.lottie.**
+-keep class com.airbnb.lottie.** {*;}
